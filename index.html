@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2-W2D1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2 id="titolo-top">Esercizi Obbligatori</h2>
+
+    </header>
+
+    <div class="obbligatori">
+
+        <!-- Esercizio 1 -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 1</h3>
+                <p>Scrivi un algoritmo per trovare il più grande tra due numeri interi.</p>
+            </div>
+            <div class="obb">
+                <div>
+                    <p>Inserisci il primo numero</p>
+
+                    <input type="number" id="num1">
+                </div>
+
+                <div>
+                    <p>Inserisci il secondo numero</p>
+
+                    <input type="number" id="num2">
+                </div>
+
+                <p>Qual è il numero più grande?</p>
+
+                <button onclick="funzione()">Calcola</button>
+
+                <div class="font" id="divVuoto"></div>
+            </div>
+
+        </div>
+       
+        <!-- Esercizio 2 -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 2</h3>
+                <p>Crea un blocco condizionale if/else per mostrare in console il messaggio corretto in ogni condizione. <br>
+                    num < 5 - mostra "Tiny" <br>
+                    num < 10 - mostra "Small" <br>
+                    num < 15 - mostra "Medium" <br>
+                    num < 20 - mostra "Large" <br>
+                    num >= 20 - mostra "Huge"
+                </p>
+            </div>
+
+
+            <div class="obb">
+                <div>
+                    <p>Inserisci un numero</p>
+                    <input type="number" id="ob2-num">
+                </div>
+
+                <button id="ob2-button" onclick="ob2()">Calcola</button>
+
+                <div class="font" id="ob2-vuoto"></div>
+            </div>
+        </div>
+        
+        <!-- Esercizio 3 -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 3</h3>
+                <p>Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8</p>
+            </div>
+            <div class="obb">
+                <p>Fai partire il ciclo</p>
+                <button onclick="ob3()">Calcola</button>
+
+                <div class="ob3-font" id="ob3-vuoto"></div>
+                
+                <!-- HTML per "modo Daniele"
+                <div class="ob3-font">
+                    <ul id="ob3-vuoto2">
+
+                    </ul>
+                </div> -->
+
+            </div>
+        </div>
+        
+        <!-- Esercizio 11 -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 11</h3>
+                <p>Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari o dispari, e mostrare il risultato in console.</p>
+            </div>
+            <div class="obb">
+                <p>Fai partire il ciclo</p>
+                <button onclick="ob11()">Calcola</button>
+
+                <div class="ob3-font" id="ob11-vuoto"></div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="titolo-top">
+        <h2>Esercizi EXTRA</h2>
+    </div>
+
+    <div class="extra">
+
+        <!-- Esercizio 1 EXTRA -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 1</h3>
+                <p>Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.</p>
+            </div>
+
+            <div class="ex">
+                <div>
+                    <p>Inserisci il primo numero</p>
+
+                    <input type="number" id="ex1Num1">
+                </div>
+
+                <div>
+                    <p>Inserisci il secondo numero</p>
+
+                    <input type="number" id="ex1Num2">
+                </div>
+
+                <button id="ob2-button" onclick="ex1()">Calcola</button>
+
+                <div class="font" id="ex1-vuoto"></div>
+            </div>
+        </div>
+       
+        <!-- Esercizio 2 EXTRA -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 2</h3>
+                <p>Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart". <br>
+                    C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10). <br>
+                    Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.</p>
+            </div>
+
+            <div class="ex">
+                <div>
+                    <p>Premi per sapere quanto spenderai</p>
+                </div>
+                <button id="ex1-button" onclick="ex2()">Calcola</button>
+
+                <div class="ex2-cont" id="ex2InsCosto1"></div>
+                <div class="ex2-cont" id="ex2InsCosto2"></div>
+                <div class="ex2-cont" id="ex2InsCosto3"></div>
+
+
+                <div class="ex2-tot" id="ex2-vuoto"></div>
+            </div>
+        </div>
+        
+        <!-- Esercizio 3 EXTRA -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 3</h3>
+                <p>Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
+                    Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.</p>
+            </div>
+
+            <div class="ex">
+                <div>
+                    <p>Premi per sapere quanto spenderai</p>
+                </div>
+                <button id="ob2-button" onclick="ex3()">Calcola</button>
+
+                <div class="ex2-cont" id="ex3InsCosto1"></div>
+                <div class="ex2-cont" id="ex3InsCosto2"></div>
+                <div class="ex2-cont" id="ex3InsCosto3"></div>
+
+                <div class="ex2-tot" id="ex3-vuoto"></div>
+            </div>
+        </div>
+        
+        <!-- Esercizio 5 EXTRA -->
+        <div class="gruppo">
+            <div class="esercizio">
+                <h3>Esercizio 5</h3>
+                <p>Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".</p>
+            </div>
+            <div class="ex">
+                <p>Fai partire il ciclo</p>
+                <button id="ob2-button" onclick="ex5()">Calcola</button>
+
+                <div class="ob3-font" id="ex5Vuoto"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="S2P1-scaricabile.js"></script>
+
+</html>
